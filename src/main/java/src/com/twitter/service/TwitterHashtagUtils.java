@@ -1,4 +1,4 @@
-package src.utils;
+package src.com.twitter.service;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -10,9 +10,9 @@ import java.util.Map;
 /**
  * Util class
  */
-public final class TwitterHashTagUtils {
+public final class TwitterHashtagUtils {
 
-    private TwitterHashTagUtils() {
+    private TwitterHashtagUtils() {
     }
 
     /**

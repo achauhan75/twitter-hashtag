@@ -1,11 +1,11 @@
-package src;
+package src.com.twitter.service;
 
 import java.util.List;
 
 /**
  * this interface can be to do manipulations on tweets for extracting any necessary details about tweets
  */
-public interface ExtractHashTags {
+public interface ExtractHashtags {
     /**
      *
      * @param n Number of hashTags to be extracted

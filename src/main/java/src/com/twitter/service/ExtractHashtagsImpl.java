@@ -1,6 +1,4 @@
-package src.impl;
-
-import src.ExtractHashTags;
+package src.com.twitter.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,19 +7,19 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static src.utils.TwitterHashTagUtils.sortByValue;
+import static src.com.twitter.service.TwitterHashtagUtils.sortByValue;
 
 /**
  * ExtractHashTagsImpl contains all the logic to extrapolate tweets read and fetch trending hashTags.
  */
-public class ExtractHashTagsImpl implements ExtractHashTags {
+public class ExtractHashtagsImpl implements ExtractHashtags {
 
     /**
      * HashMap is the primary Data structure being used to store the hashtags and their respective counts.
      */
     private HashMap<String, Integer> map = new HashMap<>();
 
-    public ExtractHashTagsImpl() {}
+    public ExtractHashtagsImpl() {}
 
     /**
      * Method Displays Top n tweets
@@ -33,6 +31,7 @@ public class ExtractHashTagsImpl implements ExtractHashTags {
         if(map.isEmpty())
             System.out.println("No hashTag is trending right now!");
         map = sortByValue(map);
+
         int i = 0;
         System.out.println(String.format("TOP %s hashTags are: ", n));
         for(Map.Entry<String, Integer> entry : map.entrySet()) {
